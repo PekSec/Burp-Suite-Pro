@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Check if script is running as root
+if [ "$EUID" -eq 0 ]; then 
+    echo "❌ This script should NOT be run as root!"
+    echo "ℹ️ Please run without sudo. The script will ask for sudo password when needed."
+    exit 1
+fi
+
 set -e  # Exit on any error
 
 echo "🔧 Starting Burp Suite Professional installation..."
