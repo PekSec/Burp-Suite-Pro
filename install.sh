@@ -15,8 +15,8 @@ echo ""
 echo "📦 Updating package lists..."
 sudo apt update || { echo "❌ Failed to update package lists"; exit 1; }
 
-echo "☕ Installing OpenJDK 25..."
-sudo apt install openjdk-25-jdk -y || { echo "❌ Failed to install OpenJDK 25"; exit 1; }
+echo "☕ Installing OpenJDK 21..."
+sudo apt install openjdk-21-jdk -y || { echo "❌ Failed to install OpenJDK 21"; exit 1; }
 
 echo "📥 Cloning Burp Suite Professional repository..."
 if [ -d "Burpsuite-Professional" ]; then
